@@ -31,7 +31,7 @@ def create_subdag_opt(main_dag):
         dag_id='.'.join([dag_name, subdag_name]),
         start_date=start_date,
         schedule_interval=None,
-        max_active_tasks=2,
+        max_active_tasks=1,
     )
     BashOperator(bash_command="echo 1", task_id="daily_job_subdag_task", dag=subdag)
     with warnings.catch_warnings(record=True):
