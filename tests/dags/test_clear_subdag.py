@@ -46,7 +46,7 @@ dag_name = "clear_subdag_test_dag"
 
 start_date = datetime.datetime(2016, 1, 1)
 
-dag = DAG(dag_id=dag_name, max_active_tasks=1, start_date=start_date, schedule_interval="2 * * * * *")
+dag = DAG(dag_id=dag_name, max_active_tasks=1, start_date=start_date, schedule_interval="12 * * * * *")
 
 daily_job_irrelevant = BashOperator(
     bash_command="echo 1",
